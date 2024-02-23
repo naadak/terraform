@@ -19,7 +19,7 @@ data "aws_ami" "latest_linux_ami" {
 ### Create the EC2 instance
 
 resource "aws_instance" "instance" {
-ami = data.aws_ami.latest_linux_ami
+ami = data.aws_ami.latest_linux_ami.id
 instance_type = "t2.micro"
 availability_zone = "us-west-2a"
 associate_public_ip_address = true
