@@ -16,7 +16,7 @@ resource "aws_subnet" "public-1" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "deham9"
+    Name = "public-1"
   }
 }
 
@@ -26,7 +26,7 @@ resource "aws_subnet" "private-1" {
   availability_zone = "us-west-2a"
 
   tags = {
-    Name = "deham9" 
+    Name = "private-1" 
   }
 }
 
@@ -37,7 +37,7 @@ resource "aws_subnet" "public-2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "deham9"
+    Name = "public-2"
   }
 }
 
@@ -47,7 +47,7 @@ resource "aws_subnet" "private-2" {
   availability_zone = "us-west-2b"
 
   tags = {
-    Name = "deham9" 
+    Name = "private-2" 
   }
 }
 

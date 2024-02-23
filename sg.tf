@@ -90,7 +90,7 @@ resource "aws_security_group" "allow_ec2_aurora" {
   }
 
   tags = {
-    Name = "allow_ssh"
+    Name = "allow_ec2_aurora"
   }
 }
 
