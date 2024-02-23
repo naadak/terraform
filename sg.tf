@@ -50,18 +50,18 @@ resource "aws_security_group" "allow_ssh" {
   vpc_id      = aws_vpc.dev_vpc.id
 
   ingress {
-    description      = "allow SSH"
-    from_port        = 22
-    to_port          = 22
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    description = "allow SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = ["0.0.0.0/0"]
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   tags = {
@@ -75,18 +75,18 @@ resource "aws_security_group" "allow_ec2_aurora" {
   vpc_id      = aws_vpc.dev_vpc.id
 
   ingress {
-    description      = "allow ec2 to aurora"
-    from_port        = 22
-    to_port          = 22
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    description = "allow ec2 to aurora"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
-    from_port        = 3306
-    to_port          = 3306
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   tags = {
@@ -97,7 +97,7 @@ resource "aws_security_group" "allow_ec2_aurora" {
 resource "aws_security_group" "allow_aurora_access" {
   name        = "allow_aurora_access"
   description = "Allow EC2 to aurora"
-  vpc_id = aws_vpc.dev_vpc.id
+  vpc_id      = aws_vpc.dev_vpc.id
 
   ingress {
     from_port   = 0
